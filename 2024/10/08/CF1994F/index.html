@@ -20,19 +20,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>Codeforces Round 959 sponsored by NEAR (Div. 1 + Div. 2) F. Stardew Valley - Komorebie</title>
+  <title>Codeforces Round 959 sponsored by NEAR (Div. 1 + Div. 2) F. Stardew Valley - Zhengzx</title>
 
   
     <meta name="description" content="原题连接 tag: 图论，欧拉回路，*2500 题意给出一个连通无向图， 个点  条边，边分成必选边和非必选边，可以存在重边和自环，要求选出一条路径包含所有的必选边，并且选出的路径上所有边（必选边和非必选边）只经过一次，并且能够回到起点。 题解由于路径上每条边只经过一次，并且要形成一个环，不难想到最后如果答案存在一定构成一条欧拉回路。回想欧拉回路的性质，每个点的度数都是偶数，且连通，因此题目的意思">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Codeforces Round 959 sponsored by NEAR (Div. 1 + Div. 2) F. Stardew Valley">
 <meta property="og:url" content="http://komorebie.top/2024/10/08/CF1994F/index.html">
-<meta property="og:site_name" content="Komorebie">
+<meta property="og:site_name" content="Zhengzx">
 <meta property="og:description" content="原题连接 tag: 图论，欧拉回路，*2500 题意给出一个连通无向图， 个点  条边，边分成必选边和非必选边，可以存在重边和自环，要求选出一条路径包含所有的必选边，并且选出的路径上所有边（必选边和非必选边）只经过一次，并且能够回到起点。 题解由于路径上每条边只经过一次，并且要形成一个环，不难想到最后如果答案存在一定构成一条欧拉回路。回想欧拉回路的性质，每个点的度数都是偶数，且连通，因此题目的意思">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-08T06:06:45.000Z">
 <meta property="article:modified_time" content="2025-07-19T16:05:44.727Z">
-<meta property="article:author" content="Komorebie">
+<meta property="article:author" content="Zhengzx">
 <meta property="article:tag" content="算法竞赛">
 <meta name="twitter:card" content="summary">
   
@@ -58,6 +58,12 @@
   
 
 
+  
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    
   
 <style>mjx-container[jax="SVG"] {
   direction: ltr;
@@ -185,7 +191,7 @@ mjx-container[display="true"] + br {
 
   
 
-<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.9/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://pic.imgdb.cn/item/670553cad29ded1a8cd4bc04.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.9/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">Komorebie</div><div class="sub normal cap">۳۱۳</div><div class="sub hover cap" style="opacity:0"> ۳۱۵</div></a></div>
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.9/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://pic.imgdb.cn/item/670553cad29ded1a8cd4bc04.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.9/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">Zhengzx</div><div class="sub normal cap">۳۱۳</div><div class="sub hover cap" style="opacity:0"> ۳۱۵</div></a></div>
 
 <nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item" href="/about/">关于</a></nav>
 </header>
@@ -201,7 +207,7 @@ mjx-container[display="true"] + br {
 
 
 </div>
-
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/Zhengzx04" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/08a41b181ce68.svg"/></a><a class="social" href="https://codeforces.com/profile/Komorebie" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://art.npanuhin.me/SVG/Codeforces/Codeforces.colored.svg"/></a></div></footer>
 
     </aside>
     <div class='l_main'>
@@ -268,7 +274,7 @@ mjx-container[display="true"] + br {
 
 
       
-<footer class="page-footer reveal fs12"><hr><div class="text"><p>本站由 <a href="/">@anonymity</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>本站由 <a target="_blank" rel="noopener" href="https://github.com/Zhengzx04">@zhengzx</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
 </div></footer>
 
       <div class='float-panel mobile-only blur' style='display:none'>
